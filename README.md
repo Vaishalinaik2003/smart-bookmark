@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Smart Bookmark
 
-## Getting Started
+**Smart Bookmark** is a modern web application that lets users **save, organize, and manage their favorite websites** easily.  
+Users can log in with Google, store custom bookmarks, and see updates in real‑time using Supabase.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔥 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🔐 **Login with Google** authentication  
+- ⭐ Add, view, and delete bookmarks  
+- 🔄 **Real‑time updates** using Supabase Realtime  
+- 📱 Responsive UI with Tailwind CSS  
+- ⚡ Built with Next.js and TypeScript
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Tech Stack
 
-## Learn More
+- **Next.js** (React framework with App Router)  
+- **TypeScript**  
+- **Tailwind CSS**  
+- **Supabase** (Auth + Database + Realtime)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📌 Challenges I Faced
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. 🚧 **Deployment errors on Vercel (`supabaseUrl is required`)**  
+   - Solved by using _client‑only_ Supabase calls inside `useEffect` and properly setting environment variables in Vercel.
+2. ⚠️ **Sensitive keys (`.env.local`) accidentally being pushed**  
+   - Solved by adding `.env.local` and `node_modules` to `.gitignore`.
+3. 📤 **Vercel build failing initially**  
+   - Fixed by making all Supabase interactions run only in the browser (`"use client";`) and adding environment variables correctly.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Live Demo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Try the app here:  
+🔗 https://smart-bookmark-a0a12n85u-vaishali-naiks-projects.vercel.app
+
+---
+
+## 📂 GitHub Repository
+
+View the source code here:  
+🔗 https://github.com/Vaishalinaik2003/smart-bookmark
+
+---
